@@ -40,10 +40,19 @@ public class SmallJavaDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDatatypeAccess().getAlternatives(), "rule__Datatype__Alternatives");
 					put(grammarAccess.getSimpleTypeAccess().getAlternatives(), "rule__SimpleType__Alternatives");
 					put(grammarAccess.getVisibilityTypesAccess().getAlternatives(), "rule__VisibilityTypes__Alternatives");
+					put(grammarAccess.getNamespaceAccess().getGroup(), "rule__Namespace__Group__0");
+					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
+					put(grammarAccess.getQualifiedNameWithWildCardsAccess().getGroup(), "rule__QualifiedNameWithWildCards__Group__0");
 					put(grammarAccess.getSmallJavaAccess().getGroup(), "rule__SmallJava__Group__0");
 					put(grammarAccess.getSmallJavaAccess().getGroup_4(), "rule__SmallJava__Group_4__0");
 					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 					put(grammarAccess.getDatatypeAccess().getGroup_0(), "rule__Datatype__Group_0__0");
+					put(grammarAccess.getNamespaceAccess().getNameAssignment_1(), "rule__Namespace__NameAssignment_1");
+					put(grammarAccess.getNamespaceAccess().getImportsAssignment_2(), "rule__Namespace__ImportsAssignment_2");
+					put(grammarAccess.getNamespaceAccess().getSmallJavaAssignment_3(), "rule__Namespace__SmallJavaAssignment_3");
+					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
 					put(grammarAccess.getSmallJavaAccess().getVisibilityAssignment_0(), "rule__SmallJava__VisibilityAssignment_0");
 					put(grammarAccess.getSmallJavaAccess().getFinalAssignment_1(), "rule__SmallJava__FinalAssignment_1");
 					put(grammarAccess.getSmallJavaAccess().getNameAssignment_3(), "rule__SmallJava__NameAssignment_3");
@@ -63,7 +72,7 @@ public class SmallJavaDslParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.shashwat.xtext.smallJava.ui.contentassist.antlr.internal.InternalSmallJavaDslParser typedParser = (org.shashwat.xtext.smallJava.ui.contentassist.antlr.internal.InternalSmallJavaDslParser) parser;
-			typedParser.entryRuleSmallJava();
+			typedParser.entryRuleNamespace();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);
