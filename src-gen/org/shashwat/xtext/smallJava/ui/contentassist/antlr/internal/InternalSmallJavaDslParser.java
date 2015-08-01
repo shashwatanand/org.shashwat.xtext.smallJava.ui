@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSmallJavaDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'String'", "'Integer'", "'Boolean'", "'Decimal'", "'BigDecimal'", "'class'", "'{'", "'}'", "'extends'", "'[]'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'String'", "'Integer'", "'Boolean'", "'Decimal'", "'BigDecimal'", "'public'", "'private'", "'class'", "'{'", "'}'", "'extends'", "'final'", "'[]'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -40,8 +40,11 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_INT=5;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
+    public static final int T__23=23;
     public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -465,14 +468,61 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     // $ANTLR end "ruleSmallJavaType"
 
 
+    // $ANTLR start "ruleVisibilityTypes"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:201:1: ruleVisibilityTypes : ( ( rule__VisibilityTypes__Alternatives ) ) ;
+    public final void ruleVisibilityTypes() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:205:1: ( ( ( rule__VisibilityTypes__Alternatives ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:206:1: ( ( rule__VisibilityTypes__Alternatives ) )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:206:1: ( ( rule__VisibilityTypes__Alternatives ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:207:1: ( rule__VisibilityTypes__Alternatives )
+            {
+             before(grammarAccess.getVisibilityTypesAccess().getAlternatives()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:208:1: ( rule__VisibilityTypes__Alternatives )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:208:2: rule__VisibilityTypes__Alternatives
+            {
+            pushFollow(FOLLOW_rule__VisibilityTypes__Alternatives_in_ruleVisibilityTypes371);
+            rule__VisibilityTypes__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getVisibilityTypesAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleVisibilityTypes"
+
+
     // $ANTLR start "rule__Datatype__Alternatives"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:200:1: rule__Datatype__Alternatives : ( ( ( rule__Datatype__Group_0__0 ) ) | ( ruleSmallJavaType ) );
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:219:1: rule__Datatype__Alternatives : ( ( ( rule__Datatype__Group_0__0 ) ) | ( ruleSmallJavaType ) );
     public final void rule__Datatype__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:204:1: ( ( ( rule__Datatype__Group_0__0 ) ) | ( ruleSmallJavaType ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:223:1: ( ( ( rule__Datatype__Group_0__0 ) ) | ( ruleSmallJavaType ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -490,16 +540,16 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:205:1: ( ( rule__Datatype__Group_0__0 ) )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:224:1: ( ( rule__Datatype__Group_0__0 ) )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:205:1: ( ( rule__Datatype__Group_0__0 ) )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:206:1: ( rule__Datatype__Group_0__0 )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:224:1: ( ( rule__Datatype__Group_0__0 ) )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:225:1: ( rule__Datatype__Group_0__0 )
                     {
                      before(grammarAccess.getDatatypeAccess().getGroup_0()); 
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:207:1: ( rule__Datatype__Group_0__0 )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:207:2: rule__Datatype__Group_0__0
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:226:1: ( rule__Datatype__Group_0__0 )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:226:2: rule__Datatype__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Datatype__Group_0__0_in_rule__Datatype__Alternatives370);
+                    pushFollow(FOLLOW_rule__Datatype__Group_0__0_in_rule__Datatype__Alternatives406);
                     rule__Datatype__Group_0__0();
 
                     state._fsp--;
@@ -515,13 +565,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
                     }
                     break;
                 case 2 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:211:6: ( ruleSmallJavaType )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:230:6: ( ruleSmallJavaType )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:211:6: ( ruleSmallJavaType )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:212:1: ruleSmallJavaType
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:230:6: ( ruleSmallJavaType )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:231:1: ruleSmallJavaType
                     {
                      before(grammarAccess.getDatatypeAccess().getSmallJavaTypeParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleSmallJavaType_in_rule__Datatype__Alternatives388);
+                    pushFollow(FOLLOW_ruleSmallJavaType_in_rule__Datatype__Alternatives424);
                     ruleSmallJavaType();
 
                     state._fsp--;
@@ -551,13 +601,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SimpleType__Alternatives"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:222:1: rule__SimpleType__Alternatives : ( ( 'String' ) | ( 'Integer' ) | ( 'Boolean' ) | ( 'Decimal' ) | ( 'BigDecimal' ) );
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:241:1: rule__SimpleType__Alternatives : ( ( 'String' ) | ( 'Integer' ) | ( 'Boolean' ) | ( 'Decimal' ) | ( 'BigDecimal' ) );
     public final void rule__SimpleType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:226:1: ( ( 'String' ) | ( 'Integer' ) | ( 'Boolean' ) | ( 'Decimal' ) | ( 'BigDecimal' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:245:1: ( ( 'String' ) | ( 'Integer' ) | ( 'Boolean' ) | ( 'Decimal' ) | ( 'BigDecimal' ) )
             int alt2=5;
             switch ( input.LA(1) ) {
             case 11:
@@ -594,13 +644,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
             switch (alt2) {
                 case 1 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:227:1: ( 'String' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:246:1: ( 'String' )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:227:1: ( 'String' )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:228:1: 'String'
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:246:1: ( 'String' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:247:1: 'String'
                     {
                      before(grammarAccess.getSimpleTypeAccess().getStringKeyword_0()); 
-                    match(input,11,FOLLOW_11_in_rule__SimpleType__Alternatives421); 
+                    match(input,11,FOLLOW_11_in_rule__SimpleType__Alternatives457); 
                      after(grammarAccess.getSimpleTypeAccess().getStringKeyword_0()); 
 
                     }
@@ -609,13 +659,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
                     }
                     break;
                 case 2 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:235:6: ( 'Integer' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:254:6: ( 'Integer' )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:235:6: ( 'Integer' )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:236:1: 'Integer'
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:254:6: ( 'Integer' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:255:1: 'Integer'
                     {
                      before(grammarAccess.getSimpleTypeAccess().getIntegerKeyword_1()); 
-                    match(input,12,FOLLOW_12_in_rule__SimpleType__Alternatives441); 
+                    match(input,12,FOLLOW_12_in_rule__SimpleType__Alternatives477); 
                      after(grammarAccess.getSimpleTypeAccess().getIntegerKeyword_1()); 
 
                     }
@@ -624,13 +674,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
                     }
                     break;
                 case 3 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:243:6: ( 'Boolean' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:262:6: ( 'Boolean' )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:243:6: ( 'Boolean' )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:244:1: 'Boolean'
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:262:6: ( 'Boolean' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:263:1: 'Boolean'
                     {
                      before(grammarAccess.getSimpleTypeAccess().getBooleanKeyword_2()); 
-                    match(input,13,FOLLOW_13_in_rule__SimpleType__Alternatives461); 
+                    match(input,13,FOLLOW_13_in_rule__SimpleType__Alternatives497); 
                      after(grammarAccess.getSimpleTypeAccess().getBooleanKeyword_2()); 
 
                     }
@@ -639,13 +689,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
                     }
                     break;
                 case 4 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:251:6: ( 'Decimal' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:270:6: ( 'Decimal' )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:251:6: ( 'Decimal' )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:252:1: 'Decimal'
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:270:6: ( 'Decimal' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:271:1: 'Decimal'
                     {
                      before(grammarAccess.getSimpleTypeAccess().getDecimalKeyword_3()); 
-                    match(input,14,FOLLOW_14_in_rule__SimpleType__Alternatives481); 
+                    match(input,14,FOLLOW_14_in_rule__SimpleType__Alternatives517); 
                      after(grammarAccess.getSimpleTypeAccess().getDecimalKeyword_3()); 
 
                     }
@@ -654,13 +704,13 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
                     }
                     break;
                 case 5 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:259:6: ( 'BigDecimal' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:278:6: ( 'BigDecimal' )
                     {
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:259:6: ( 'BigDecimal' )
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:260:1: 'BigDecimal'
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:278:6: ( 'BigDecimal' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:279:1: 'BigDecimal'
                     {
                      before(grammarAccess.getSimpleTypeAccess().getBigDecimalKeyword_4()); 
-                    match(input,15,FOLLOW_15_in_rule__SimpleType__Alternatives501); 
+                    match(input,15,FOLLOW_15_in_rule__SimpleType__Alternatives537); 
                      after(grammarAccess.getSimpleTypeAccess().getBigDecimalKeyword_4()); 
 
                     }
@@ -685,22 +735,105 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__SimpleType__Alternatives"
 
 
+    // $ANTLR start "rule__VisibilityTypes__Alternatives"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:291:1: rule__VisibilityTypes__Alternatives : ( ( ( 'public' ) ) | ( ( 'private' ) ) );
+    public final void rule__VisibilityTypes__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:295:1: ( ( ( 'public' ) ) | ( ( 'private' ) ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==16) ) {
+                alt3=1;
+            }
+            else if ( (LA3_0==17) ) {
+                alt3=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 3, 0, input);
+
+                throw nvae;
+            }
+            switch (alt3) {
+                case 1 :
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:296:1: ( ( 'public' ) )
+                    {
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:296:1: ( ( 'public' ) )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:297:1: ( 'public' )
+                    {
+                     before(grammarAccess.getVisibilityTypesAccess().getPUBLICEnumLiteralDeclaration_0()); 
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:298:1: ( 'public' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:298:3: 'public'
+                    {
+                    match(input,16,FOLLOW_16_in_rule__VisibilityTypes__Alternatives572); 
+
+                    }
+
+                     after(grammarAccess.getVisibilityTypesAccess().getPUBLICEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:303:6: ( ( 'private' ) )
+                    {
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:303:6: ( ( 'private' ) )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:304:1: ( 'private' )
+                    {
+                     before(grammarAccess.getVisibilityTypesAccess().getPRIVATEEnumLiteralDeclaration_1()); 
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:305:1: ( 'private' )
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:305:3: 'private'
+                    {
+                    match(input,17,FOLLOW_17_in_rule__VisibilityTypes__Alternatives593); 
+
+                    }
+
+                     after(grammarAccess.getVisibilityTypesAccess().getPRIVATEEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VisibilityTypes__Alternatives"
+
+
     // $ANTLR start "rule__SmallJava__Group__0"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:274:1: rule__SmallJava__Group__0 : rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:317:1: rule__SmallJava__Group__0 : rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1 ;
     public final void rule__SmallJava__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:278:1: ( rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:279:2: rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:321:1: ( rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:322:2: rule__SmallJava__Group__0__Impl rule__SmallJava__Group__1
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__0__Impl_in_rule__SmallJava__Group__0533);
+            pushFollow(FOLLOW_rule__SmallJava__Group__0__Impl_in_rule__SmallJava__Group__0626);
             rule__SmallJava__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group__1_in_rule__SmallJava__Group__0536);
+            pushFollow(FOLLOW_rule__SmallJava__Group__1_in_rule__SmallJava__Group__0629);
             rule__SmallJava__Group__1();
 
             state._fsp--;
@@ -724,21 +857,42 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__0__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:286:1: rule__SmallJava__Group__0__Impl : ( 'class' ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:329:1: rule__SmallJava__Group__0__Impl : ( ( rule__SmallJava__VisibilityAssignment_0 )? ) ;
     public final void rule__SmallJava__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:290:1: ( ( 'class' ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:291:1: ( 'class' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:333:1: ( ( ( rule__SmallJava__VisibilityAssignment_0 )? ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:334:1: ( ( rule__SmallJava__VisibilityAssignment_0 )? )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:291:1: ( 'class' )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:292:1: 'class'
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:334:1: ( ( rule__SmallJava__VisibilityAssignment_0 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:335:1: ( rule__SmallJava__VisibilityAssignment_0 )?
             {
-             before(grammarAccess.getSmallJavaAccess().getClassKeyword_0()); 
-            match(input,16,FOLLOW_16_in_rule__SmallJava__Group__0__Impl564); 
-             after(grammarAccess.getSmallJavaAccess().getClassKeyword_0()); 
+             before(grammarAccess.getSmallJavaAccess().getVisibilityAssignment_0()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:336:1: ( rule__SmallJava__VisibilityAssignment_0 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( ((LA4_0>=16 && LA4_0<=17)) ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:336:2: rule__SmallJava__VisibilityAssignment_0
+                    {
+                    pushFollow(FOLLOW_rule__SmallJava__VisibilityAssignment_0_in_rule__SmallJava__Group__0__Impl656);
+                    rule__SmallJava__VisibilityAssignment_0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getSmallJavaAccess().getVisibilityAssignment_0()); 
 
             }
 
@@ -761,21 +915,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:305:1: rule__SmallJava__Group__1 : rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:346:1: rule__SmallJava__Group__1 : rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2 ;
     public final void rule__SmallJava__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:309:1: ( rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:310:2: rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:350:1: ( rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:351:2: rule__SmallJava__Group__1__Impl rule__SmallJava__Group__2
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__1__Impl_in_rule__SmallJava__Group__1595);
+            pushFollow(FOLLOW_rule__SmallJava__Group__1__Impl_in_rule__SmallJava__Group__1687);
             rule__SmallJava__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group__2_in_rule__SmallJava__Group__1598);
+            pushFollow(FOLLOW_rule__SmallJava__Group__2_in_rule__SmallJava__Group__1690);
             rule__SmallJava__Group__2();
 
             state._fsp--;
@@ -799,31 +953,42 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__1__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:317:1: rule__SmallJava__Group__1__Impl : ( ( rule__SmallJava__NameAssignment_1 ) ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:358:1: rule__SmallJava__Group__1__Impl : ( ( rule__SmallJava__FinalAssignment_1 )? ) ;
     public final void rule__SmallJava__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:321:1: ( ( ( rule__SmallJava__NameAssignment_1 ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:322:1: ( ( rule__SmallJava__NameAssignment_1 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:362:1: ( ( ( rule__SmallJava__FinalAssignment_1 )? ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:363:1: ( ( rule__SmallJava__FinalAssignment_1 )? )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:322:1: ( ( rule__SmallJava__NameAssignment_1 ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:323:1: ( rule__SmallJava__NameAssignment_1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:363:1: ( ( rule__SmallJava__FinalAssignment_1 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:364:1: ( rule__SmallJava__FinalAssignment_1 )?
             {
-             before(grammarAccess.getSmallJavaAccess().getNameAssignment_1()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:324:1: ( rule__SmallJava__NameAssignment_1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:324:2: rule__SmallJava__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__SmallJava__NameAssignment_1_in_rule__SmallJava__Group__1__Impl625);
-            rule__SmallJava__NameAssignment_1();
+             before(grammarAccess.getSmallJavaAccess().getFinalAssignment_1()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:365:1: ( rule__SmallJava__FinalAssignment_1 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA5_0==22) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:365:2: rule__SmallJava__FinalAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__SmallJava__FinalAssignment_1_in_rule__SmallJava__Group__1__Impl717);
+                    rule__SmallJava__FinalAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getSmallJavaAccess().getNameAssignment_1()); 
+             after(grammarAccess.getSmallJavaAccess().getFinalAssignment_1()); 
 
             }
 
@@ -846,21 +1011,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__2"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:334:1: rule__SmallJava__Group__2 : rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:375:1: rule__SmallJava__Group__2 : rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3 ;
     public final void rule__SmallJava__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:338:1: ( rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:339:2: rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:379:1: ( rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:380:2: rule__SmallJava__Group__2__Impl rule__SmallJava__Group__3
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__2__Impl_in_rule__SmallJava__Group__2655);
+            pushFollow(FOLLOW_rule__SmallJava__Group__2__Impl_in_rule__SmallJava__Group__2748);
             rule__SmallJava__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group__3_in_rule__SmallJava__Group__2658);
+            pushFollow(FOLLOW_rule__SmallJava__Group__3_in_rule__SmallJava__Group__2751);
             rule__SmallJava__Group__3();
 
             state._fsp--;
@@ -884,42 +1049,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__2__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:346:1: rule__SmallJava__Group__2__Impl : ( ( rule__SmallJava__Group_2__0 )? ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:387:1: rule__SmallJava__Group__2__Impl : ( 'class' ) ;
     public final void rule__SmallJava__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:350:1: ( ( ( rule__SmallJava__Group_2__0 )? ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:351:1: ( ( rule__SmallJava__Group_2__0 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:391:1: ( ( 'class' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:392:1: ( 'class' )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:351:1: ( ( rule__SmallJava__Group_2__0 )? )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:352:1: ( rule__SmallJava__Group_2__0 )?
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:392:1: ( 'class' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:393:1: 'class'
             {
-             before(grammarAccess.getSmallJavaAccess().getGroup_2()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:353:1: ( rule__SmallJava__Group_2__0 )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==19) ) {
-                alt3=1;
-            }
-            switch (alt3) {
-                case 1 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:353:2: rule__SmallJava__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__SmallJava__Group_2__0_in_rule__SmallJava__Group__2__Impl685);
-                    rule__SmallJava__Group_2__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getSmallJavaAccess().getGroup_2()); 
+             before(grammarAccess.getSmallJavaAccess().getClassKeyword_2()); 
+            match(input,18,FOLLOW_18_in_rule__SmallJava__Group__2__Impl779); 
+             after(grammarAccess.getSmallJavaAccess().getClassKeyword_2()); 
 
             }
 
@@ -942,21 +1086,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__3"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:363:1: rule__SmallJava__Group__3 : rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:406:1: rule__SmallJava__Group__3 : rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4 ;
     public final void rule__SmallJava__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:367:1: ( rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:368:2: rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:410:1: ( rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:411:2: rule__SmallJava__Group__3__Impl rule__SmallJava__Group__4
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__3__Impl_in_rule__SmallJava__Group__3716);
+            pushFollow(FOLLOW_rule__SmallJava__Group__3__Impl_in_rule__SmallJava__Group__3810);
             rule__SmallJava__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group__4_in_rule__SmallJava__Group__3719);
+            pushFollow(FOLLOW_rule__SmallJava__Group__4_in_rule__SmallJava__Group__3813);
             rule__SmallJava__Group__4();
 
             state._fsp--;
@@ -980,21 +1124,31 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__3__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:375:1: rule__SmallJava__Group__3__Impl : ( '{' ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:418:1: rule__SmallJava__Group__3__Impl : ( ( rule__SmallJava__NameAssignment_3 ) ) ;
     public final void rule__SmallJava__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:379:1: ( ( '{' ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:380:1: ( '{' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:422:1: ( ( ( rule__SmallJava__NameAssignment_3 ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:423:1: ( ( rule__SmallJava__NameAssignment_3 ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:380:1: ( '{' )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:381:1: '{'
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:423:1: ( ( rule__SmallJava__NameAssignment_3 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:424:1: ( rule__SmallJava__NameAssignment_3 )
             {
-             before(grammarAccess.getSmallJavaAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,17,FOLLOW_17_in_rule__SmallJava__Group__3__Impl747); 
-             after(grammarAccess.getSmallJavaAccess().getLeftCurlyBracketKeyword_3()); 
+             before(grammarAccess.getSmallJavaAccess().getNameAssignment_3()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:425:1: ( rule__SmallJava__NameAssignment_3 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:425:2: rule__SmallJava__NameAssignment_3
+            {
+            pushFollow(FOLLOW_rule__SmallJava__NameAssignment_3_in_rule__SmallJava__Group__3__Impl840);
+            rule__SmallJava__NameAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSmallJavaAccess().getNameAssignment_3()); 
 
             }
 
@@ -1017,21 +1171,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__4"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:394:1: rule__SmallJava__Group__4 : rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:435:1: rule__SmallJava__Group__4 : rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5 ;
     public final void rule__SmallJava__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:398:1: ( rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:399:2: rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:439:1: ( rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:440:2: rule__SmallJava__Group__4__Impl rule__SmallJava__Group__5
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__4__Impl_in_rule__SmallJava__Group__4778);
+            pushFollow(FOLLOW_rule__SmallJava__Group__4__Impl_in_rule__SmallJava__Group__4870);
             rule__SmallJava__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group__5_in_rule__SmallJava__Group__4781);
+            pushFollow(FOLLOW_rule__SmallJava__Group__5_in_rule__SmallJava__Group__4873);
             rule__SmallJava__Group__5();
 
             state._fsp--;
@@ -1055,49 +1209,42 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__4__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:406:1: rule__SmallJava__Group__4__Impl : ( ( rule__SmallJava__AttributeAssignment_4 )* ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:447:1: rule__SmallJava__Group__4__Impl : ( ( rule__SmallJava__Group_4__0 )? ) ;
     public final void rule__SmallJava__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:410:1: ( ( ( rule__SmallJava__AttributeAssignment_4 )* ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:411:1: ( ( rule__SmallJava__AttributeAssignment_4 )* )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:451:1: ( ( ( rule__SmallJava__Group_4__0 )? ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:452:1: ( ( rule__SmallJava__Group_4__0 )? )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:411:1: ( ( rule__SmallJava__AttributeAssignment_4 )* )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:412:1: ( rule__SmallJava__AttributeAssignment_4 )*
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:452:1: ( ( rule__SmallJava__Group_4__0 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:453:1: ( rule__SmallJava__Group_4__0 )?
             {
-             before(grammarAccess.getSmallJavaAccess().getAttributeAssignment_4()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:413:1: ( rule__SmallJava__AttributeAssignment_4 )*
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+             before(grammarAccess.getSmallJavaAccess().getGroup_4()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:454:1: ( rule__SmallJava__Group_4__0 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-                if ( (LA4_0==RULE_ID||(LA4_0>=11 && LA4_0<=15)) ) {
-                    alt4=1;
-                }
+            if ( (LA6_0==21) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:454:2: rule__SmallJava__Group_4__0
+                    {
+                    pushFollow(FOLLOW_rule__SmallJava__Group_4__0_in_rule__SmallJava__Group__4__Impl900);
+                    rule__SmallJava__Group_4__0();
 
-
-                switch (alt4) {
-            	case 1 :
-            	    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:413:2: rule__SmallJava__AttributeAssignment_4
-            	    {
-            	    pushFollow(FOLLOW_rule__SmallJava__AttributeAssignment_4_in_rule__SmallJava__Group__4__Impl808);
-            	    rule__SmallJava__AttributeAssignment_4();
-
-            	    state._fsp--;
+                    state._fsp--;
 
 
-            	    }
-            	    break;
+                    }
+                    break;
 
-            	default :
-            	    break loop4;
-                }
-            } while (true);
+            }
 
-             after(grammarAccess.getSmallJavaAccess().getAttributeAssignment_4()); 
+             after(grammarAccess.getSmallJavaAccess().getGroup_4()); 
 
             }
 
@@ -1120,17 +1267,22 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__5"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:423:1: rule__SmallJava__Group__5 : rule__SmallJava__Group__5__Impl ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:464:1: rule__SmallJava__Group__5 : rule__SmallJava__Group__5__Impl rule__SmallJava__Group__6 ;
     public final void rule__SmallJava__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:427:1: ( rule__SmallJava__Group__5__Impl )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:428:2: rule__SmallJava__Group__5__Impl
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:468:1: ( rule__SmallJava__Group__5__Impl rule__SmallJava__Group__6 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:469:2: rule__SmallJava__Group__5__Impl rule__SmallJava__Group__6
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group__5__Impl_in_rule__SmallJava__Group__5839);
+            pushFollow(FOLLOW_rule__SmallJava__Group__5__Impl_in_rule__SmallJava__Group__5931);
             rule__SmallJava__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SmallJava__Group__6_in_rule__SmallJava__Group__5934);
+            rule__SmallJava__Group__6();
 
             state._fsp--;
 
@@ -1153,21 +1305,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJava__Group__5__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:434:1: rule__SmallJava__Group__5__Impl : ( '}' ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:476:1: rule__SmallJava__Group__5__Impl : ( '{' ) ;
     public final void rule__SmallJava__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:438:1: ( ( '}' ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:439:1: ( '}' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:480:1: ( ( '{' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:481:1: ( '{' )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:439:1: ( '}' )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:440:1: '}'
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:481:1: ( '{' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:482:1: '{'
             {
-             before(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,18,FOLLOW_18_in_rule__SmallJava__Group__5__Impl867); 
-             after(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getSmallJavaAccess().getLeftCurlyBracketKeyword_5()); 
+            match(input,19,FOLLOW_19_in_rule__SmallJava__Group__5__Impl962); 
+             after(grammarAccess.getSmallJavaAccess().getLeftCurlyBracketKeyword_5()); 
 
             }
 
@@ -1189,93 +1341,23 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__SmallJava__Group__5__Impl"
 
 
-    // $ANTLR start "rule__SmallJava__Group_2__0"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:465:1: rule__SmallJava__Group_2__0 : rule__SmallJava__Group_2__0__Impl rule__SmallJava__Group_2__1 ;
-    public final void rule__SmallJava__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__SmallJava__Group__6"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:495:1: rule__SmallJava__Group__6 : rule__SmallJava__Group__6__Impl rule__SmallJava__Group__7 ;
+    public final void rule__SmallJava__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:469:1: ( rule__SmallJava__Group_2__0__Impl rule__SmallJava__Group_2__1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:470:2: rule__SmallJava__Group_2__0__Impl rule__SmallJava__Group_2__1
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:499:1: ( rule__SmallJava__Group__6__Impl rule__SmallJava__Group__7 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:500:2: rule__SmallJava__Group__6__Impl rule__SmallJava__Group__7
             {
-            pushFollow(FOLLOW_rule__SmallJava__Group_2__0__Impl_in_rule__SmallJava__Group_2__0910);
-            rule__SmallJava__Group_2__0__Impl();
+            pushFollow(FOLLOW_rule__SmallJava__Group__6__Impl_in_rule__SmallJava__Group__6993);
+            rule__SmallJava__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SmallJava__Group_2__1_in_rule__SmallJava__Group_2__0913);
-            rule__SmallJava__Group_2__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SmallJava__Group_2__0"
-
-
-    // $ANTLR start "rule__SmallJava__Group_2__0__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:477:1: rule__SmallJava__Group_2__0__Impl : ( 'extends' ) ;
-    public final void rule__SmallJava__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:481:1: ( ( 'extends' ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:482:1: ( 'extends' )
-            {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:482:1: ( 'extends' )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:483:1: 'extends'
-            {
-             before(grammarAccess.getSmallJavaAccess().getExtendsKeyword_2_0()); 
-            match(input,19,FOLLOW_19_in_rule__SmallJava__Group_2__0__Impl941); 
-             after(grammarAccess.getSmallJavaAccess().getExtendsKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SmallJava__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__SmallJava__Group_2__1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:496:1: rule__SmallJava__Group_2__1 : rule__SmallJava__Group_2__1__Impl ;
-    public final void rule__SmallJava__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:500:1: ( rule__SmallJava__Group_2__1__Impl )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:501:2: rule__SmallJava__Group_2__1__Impl
-            {
-            pushFollow(FOLLOW_rule__SmallJava__Group_2__1__Impl_in_rule__SmallJava__Group_2__1972);
-            rule__SmallJava__Group_2__1__Impl();
+            pushFollow(FOLLOW_rule__SmallJava__Group__7_in_rule__SmallJava__Group__6996);
+            rule__SmallJava__Group__7();
 
             state._fsp--;
 
@@ -1294,35 +1376,53 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__SmallJava__Group_2__1"
+    // $ANTLR end "rule__SmallJava__Group__6"
 
 
-    // $ANTLR start "rule__SmallJava__Group_2__1__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:507:1: rule__SmallJava__Group_2__1__Impl : ( ( rule__SmallJava__ParentAssignment_2_1 ) ) ;
-    public final void rule__SmallJava__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SmallJava__Group__6__Impl"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:507:1: rule__SmallJava__Group__6__Impl : ( ( rule__SmallJava__AttributeAssignment_6 )* ) ;
+    public final void rule__SmallJava__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:511:1: ( ( ( rule__SmallJava__ParentAssignment_2_1 ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:512:1: ( ( rule__SmallJava__ParentAssignment_2_1 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:511:1: ( ( ( rule__SmallJava__AttributeAssignment_6 )* ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:512:1: ( ( rule__SmallJava__AttributeAssignment_6 )* )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:512:1: ( ( rule__SmallJava__ParentAssignment_2_1 ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:513:1: ( rule__SmallJava__ParentAssignment_2_1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:512:1: ( ( rule__SmallJava__AttributeAssignment_6 )* )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:513:1: ( rule__SmallJava__AttributeAssignment_6 )*
             {
-             before(grammarAccess.getSmallJavaAccess().getParentAssignment_2_1()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:514:1: ( rule__SmallJava__ParentAssignment_2_1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:514:2: rule__SmallJava__ParentAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__SmallJava__ParentAssignment_2_1_in_rule__SmallJava__Group_2__1__Impl999);
-            rule__SmallJava__ParentAssignment_2_1();
+             before(grammarAccess.getSmallJavaAccess().getAttributeAssignment_6()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:514:1: ( rule__SmallJava__AttributeAssignment_6 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-            state._fsp--;
+                if ( (LA7_0==RULE_ID||(LA7_0>=11 && LA7_0<=15)) ) {
+                    alt7=1;
+                }
 
 
-            }
+                switch (alt7) {
+            	case 1 :
+            	    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:514:2: rule__SmallJava__AttributeAssignment_6
+            	    {
+            	    pushFollow(FOLLOW_rule__SmallJava__AttributeAssignment_6_in_rule__SmallJava__Group__6__Impl1023);
+            	    rule__SmallJava__AttributeAssignment_6();
 
-             after(grammarAccess.getSmallJavaAccess().getParentAssignment_2_1()); 
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getSmallJavaAccess().getAttributeAssignment_6()); 
 
             }
 
@@ -1341,25 +1441,250 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__SmallJava__Group_2__1__Impl"
+    // $ANTLR end "rule__SmallJava__Group__6__Impl"
+
+
+    // $ANTLR start "rule__SmallJava__Group__7"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:524:1: rule__SmallJava__Group__7 : rule__SmallJava__Group__7__Impl ;
+    public final void rule__SmallJava__Group__7() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:528:1: ( rule__SmallJava__Group__7__Impl )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:529:2: rule__SmallJava__Group__7__Impl
+            {
+            pushFollow(FOLLOW_rule__SmallJava__Group__7__Impl_in_rule__SmallJava__Group__71054);
+            rule__SmallJava__Group__7__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group__7"
+
+
+    // $ANTLR start "rule__SmallJava__Group__7__Impl"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:535:1: rule__SmallJava__Group__7__Impl : ( '}' ) ;
+    public final void rule__SmallJava__Group__7__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:539:1: ( ( '}' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:540:1: ( '}' )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:540:1: ( '}' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:541:1: '}'
+            {
+             before(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_7()); 
+            match(input,20,FOLLOW_20_in_rule__SmallJava__Group__7__Impl1082); 
+             after(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_7()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group__7__Impl"
+
+
+    // $ANTLR start "rule__SmallJava__Group_4__0"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:570:1: rule__SmallJava__Group_4__0 : rule__SmallJava__Group_4__0__Impl rule__SmallJava__Group_4__1 ;
+    public final void rule__SmallJava__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:574:1: ( rule__SmallJava__Group_4__0__Impl rule__SmallJava__Group_4__1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:575:2: rule__SmallJava__Group_4__0__Impl rule__SmallJava__Group_4__1
+            {
+            pushFollow(FOLLOW_rule__SmallJava__Group_4__0__Impl_in_rule__SmallJava__Group_4__01129);
+            rule__SmallJava__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SmallJava__Group_4__1_in_rule__SmallJava__Group_4__01132);
+            rule__SmallJava__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group_4__0"
+
+
+    // $ANTLR start "rule__SmallJava__Group_4__0__Impl"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:582:1: rule__SmallJava__Group_4__0__Impl : ( 'extends' ) ;
+    public final void rule__SmallJava__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:586:1: ( ( 'extends' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:587:1: ( 'extends' )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:587:1: ( 'extends' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:588:1: 'extends'
+            {
+             before(grammarAccess.getSmallJavaAccess().getExtendsKeyword_4_0()); 
+            match(input,21,FOLLOW_21_in_rule__SmallJava__Group_4__0__Impl1160); 
+             after(grammarAccess.getSmallJavaAccess().getExtendsKeyword_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__SmallJava__Group_4__1"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:601:1: rule__SmallJava__Group_4__1 : rule__SmallJava__Group_4__1__Impl ;
+    public final void rule__SmallJava__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:605:1: ( rule__SmallJava__Group_4__1__Impl )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:606:2: rule__SmallJava__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__SmallJava__Group_4__1__Impl_in_rule__SmallJava__Group_4__11191);
+            rule__SmallJava__Group_4__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group_4__1"
+
+
+    // $ANTLR start "rule__SmallJava__Group_4__1__Impl"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:612:1: rule__SmallJava__Group_4__1__Impl : ( ( rule__SmallJava__ParentAssignment_4_1 ) ) ;
+    public final void rule__SmallJava__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:616:1: ( ( ( rule__SmallJava__ParentAssignment_4_1 ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:617:1: ( ( rule__SmallJava__ParentAssignment_4_1 ) )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:617:1: ( ( rule__SmallJava__ParentAssignment_4_1 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:618:1: ( rule__SmallJava__ParentAssignment_4_1 )
+            {
+             before(grammarAccess.getSmallJavaAccess().getParentAssignment_4_1()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:619:1: ( rule__SmallJava__ParentAssignment_4_1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:619:2: rule__SmallJava__ParentAssignment_4_1
+            {
+            pushFollow(FOLLOW_rule__SmallJava__ParentAssignment_4_1_in_rule__SmallJava__Group_4__1__Impl1218);
+            rule__SmallJava__ParentAssignment_4_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSmallJavaAccess().getParentAssignment_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__Group_4__1__Impl"
 
 
     // $ANTLR start "rule__Attribute__Group__0"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:528:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:633:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
     public final void rule__Attribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:532:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:533:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:637:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:638:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__01033);
+            pushFollow(FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__01252);
             rule__Attribute__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__01036);
+            pushFollow(FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__01255);
             rule__Attribute__Group__1();
 
             state._fsp--;
@@ -1383,23 +1708,23 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__Group__0__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:540:1: rule__Attribute__Group__0__Impl : ( ( rule__Attribute__DatatypeAssignment_0 ) ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:645:1: rule__Attribute__Group__0__Impl : ( ( rule__Attribute__DatatypeAssignment_0 ) ) ;
     public final void rule__Attribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:544:1: ( ( ( rule__Attribute__DatatypeAssignment_0 ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:545:1: ( ( rule__Attribute__DatatypeAssignment_0 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:649:1: ( ( ( rule__Attribute__DatatypeAssignment_0 ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:650:1: ( ( rule__Attribute__DatatypeAssignment_0 ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:545:1: ( ( rule__Attribute__DatatypeAssignment_0 ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:546:1: ( rule__Attribute__DatatypeAssignment_0 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:650:1: ( ( rule__Attribute__DatatypeAssignment_0 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:651:1: ( rule__Attribute__DatatypeAssignment_0 )
             {
              before(grammarAccess.getAttributeAccess().getDatatypeAssignment_0()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:547:1: ( rule__Attribute__DatatypeAssignment_0 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:547:2: rule__Attribute__DatatypeAssignment_0
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:652:1: ( rule__Attribute__DatatypeAssignment_0 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:652:2: rule__Attribute__DatatypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__Attribute__DatatypeAssignment_0_in_rule__Attribute__Group__0__Impl1063);
+            pushFollow(FOLLOW_rule__Attribute__DatatypeAssignment_0_in_rule__Attribute__Group__0__Impl1282);
             rule__Attribute__DatatypeAssignment_0();
 
             state._fsp--;
@@ -1430,21 +1755,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__Group__1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:557:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:662:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
     public final void rule__Attribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:561:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:562:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:666:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:667:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__11093);
+            pushFollow(FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__11312);
             rule__Attribute__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__11096);
+            pushFollow(FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__11315);
             rule__Attribute__Group__2();
 
             state._fsp--;
@@ -1468,31 +1793,31 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__Group__1__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:569:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__ArrayAssignment_1 )? ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:674:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__ArrayAssignment_1 )? ) ;
     public final void rule__Attribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:573:1: ( ( ( rule__Attribute__ArrayAssignment_1 )? ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:574:1: ( ( rule__Attribute__ArrayAssignment_1 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:678:1: ( ( ( rule__Attribute__ArrayAssignment_1 )? ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:679:1: ( ( rule__Attribute__ArrayAssignment_1 )? )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:574:1: ( ( rule__Attribute__ArrayAssignment_1 )? )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:575:1: ( rule__Attribute__ArrayAssignment_1 )?
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:679:1: ( ( rule__Attribute__ArrayAssignment_1 )? )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:680:1: ( rule__Attribute__ArrayAssignment_1 )?
             {
              before(grammarAccess.getAttributeAccess().getArrayAssignment_1()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:576:1: ( rule__Attribute__ArrayAssignment_1 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:681:1: ( rule__Attribute__ArrayAssignment_1 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
-                alt5=1;
+            if ( (LA8_0==23) ) {
+                alt8=1;
             }
-            switch (alt5) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:576:2: rule__Attribute__ArrayAssignment_1
+                    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:681:2: rule__Attribute__ArrayAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Attribute__ArrayAssignment_1_in_rule__Attribute__Group__1__Impl1123);
+                    pushFollow(FOLLOW_rule__Attribute__ArrayAssignment_1_in_rule__Attribute__Group__1__Impl1342);
                     rule__Attribute__ArrayAssignment_1();
 
                     state._fsp--;
@@ -1526,16 +1851,16 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__Group__2"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:586:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:691:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
     public final void rule__Attribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:590:1: ( rule__Attribute__Group__2__Impl )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:591:2: rule__Attribute__Group__2__Impl
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:695:1: ( rule__Attribute__Group__2__Impl )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:696:2: rule__Attribute__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__21154);
+            pushFollow(FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__21373);
             rule__Attribute__Group__2__Impl();
 
             state._fsp--;
@@ -1559,23 +1884,23 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__Group__2__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:597:1: rule__Attribute__Group__2__Impl : ( ( rule__Attribute__NameAssignment_2 ) ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:702:1: rule__Attribute__Group__2__Impl : ( ( rule__Attribute__NameAssignment_2 ) ) ;
     public final void rule__Attribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:601:1: ( ( ( rule__Attribute__NameAssignment_2 ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:602:1: ( ( rule__Attribute__NameAssignment_2 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:706:1: ( ( ( rule__Attribute__NameAssignment_2 ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:707:1: ( ( rule__Attribute__NameAssignment_2 ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:602:1: ( ( rule__Attribute__NameAssignment_2 ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:603:1: ( rule__Attribute__NameAssignment_2 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:707:1: ( ( rule__Attribute__NameAssignment_2 ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:708:1: ( rule__Attribute__NameAssignment_2 )
             {
              before(grammarAccess.getAttributeAccess().getNameAssignment_2()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:604:1: ( rule__Attribute__NameAssignment_2 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:604:2: rule__Attribute__NameAssignment_2
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:709:1: ( rule__Attribute__NameAssignment_2 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:709:2: rule__Attribute__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Attribute__NameAssignment_2_in_rule__Attribute__Group__2__Impl1181);
+            pushFollow(FOLLOW_rule__Attribute__NameAssignment_2_in_rule__Attribute__Group__2__Impl1400);
             rule__Attribute__NameAssignment_2();
 
             state._fsp--;
@@ -1606,21 +1931,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Datatype__Group_0__0"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:620:1: rule__Datatype__Group_0__0 : rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1 ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:725:1: rule__Datatype__Group_0__0 : rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1 ;
     public final void rule__Datatype__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:624:1: ( rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1 )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:625:2: rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:729:1: ( rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1 )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:730:2: rule__Datatype__Group_0__0__Impl rule__Datatype__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Datatype__Group_0__0__Impl_in_rule__Datatype__Group_0__01217);
+            pushFollow(FOLLOW_rule__Datatype__Group_0__0__Impl_in_rule__Datatype__Group_0__01436);
             rule__Datatype__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Datatype__Group_0__1_in_rule__Datatype__Group_0__01220);
+            pushFollow(FOLLOW_rule__Datatype__Group_0__1_in_rule__Datatype__Group_0__01439);
             rule__Datatype__Group_0__1();
 
             state._fsp--;
@@ -1644,21 +1969,21 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Datatype__Group_0__0__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:632:1: rule__Datatype__Group_0__0__Impl : ( () ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:737:1: rule__Datatype__Group_0__0__Impl : ( () ) ;
     public final void rule__Datatype__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:636:1: ( ( () ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:637:1: ( () )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:741:1: ( ( () ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:742:1: ( () )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:637:1: ( () )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:638:1: ()
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:742:1: ( () )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:743:1: ()
             {
              before(grammarAccess.getDatatypeAccess().getDatatypeAction_0_0()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:639:1: ()
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:641:1: 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:744:1: ()
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:746:1: 
             {
             }
 
@@ -1681,16 +2006,16 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Datatype__Group_0__1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:651:1: rule__Datatype__Group_0__1 : rule__Datatype__Group_0__1__Impl ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:756:1: rule__Datatype__Group_0__1 : rule__Datatype__Group_0__1__Impl ;
     public final void rule__Datatype__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:655:1: ( rule__Datatype__Group_0__1__Impl )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:656:2: rule__Datatype__Group_0__1__Impl
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:760:1: ( rule__Datatype__Group_0__1__Impl )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:761:2: rule__Datatype__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Datatype__Group_0__1__Impl_in_rule__Datatype__Group_0__11278);
+            pushFollow(FOLLOW_rule__Datatype__Group_0__1__Impl_in_rule__Datatype__Group_0__11497);
             rule__Datatype__Group_0__1__Impl();
 
             state._fsp--;
@@ -1714,20 +2039,20 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Datatype__Group_0__1__Impl"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:662:1: rule__Datatype__Group_0__1__Impl : ( ruleSimpleType ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:767:1: rule__Datatype__Group_0__1__Impl : ( ruleSimpleType ) ;
     public final void rule__Datatype__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:666:1: ( ( ruleSimpleType ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:667:1: ( ruleSimpleType )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:771:1: ( ( ruleSimpleType ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:772:1: ( ruleSimpleType )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:667:1: ( ruleSimpleType )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:668:1: ruleSimpleType
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:772:1: ( ruleSimpleType )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:773:1: ruleSimpleType
             {
              before(grammarAccess.getDatatypeAccess().getSimpleTypeParserRuleCall_0_1()); 
-            pushFollow(FOLLOW_ruleSimpleType_in_rule__Datatype__Group_0__1__Impl1305);
+            pushFollow(FOLLOW_ruleSimpleType_in_rule__Datatype__Group_0__1__Impl1524);
             ruleSimpleType();
 
             state._fsp--;
@@ -1754,22 +2079,26 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__Datatype__Group_0__1__Impl"
 
 
-    // $ANTLR start "rule__SmallJava__NameAssignment_1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:684:1: rule__SmallJava__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__SmallJava__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__SmallJava__VisibilityAssignment_0"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:789:1: rule__SmallJava__VisibilityAssignment_0 : ( ruleVisibilityTypes ) ;
+    public final void rule__SmallJava__VisibilityAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:688:1: ( ( RULE_ID ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:689:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:793:1: ( ( ruleVisibilityTypes ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:794:1: ( ruleVisibilityTypes )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:689:1: ( RULE_ID )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:690:1: RULE_ID
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:794:1: ( ruleVisibilityTypes )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:795:1: ruleVisibilityTypes
             {
-             before(grammarAccess.getSmallJavaAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJava__NameAssignment_11343); 
-             after(grammarAccess.getSmallJavaAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getSmallJavaAccess().getVisibilityVisibilityTypesEnumRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleVisibilityTypes_in_rule__SmallJava__VisibilityAssignment_01562);
+            ruleVisibilityTypes();
+
+            state._fsp--;
+
+             after(grammarAccess.getSmallJavaAccess().getVisibilityVisibilityTypesEnumRuleCall_0_0()); 
 
             }
 
@@ -1788,33 +2117,33 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__SmallJava__NameAssignment_1"
+    // $ANTLR end "rule__SmallJava__VisibilityAssignment_0"
 
 
-    // $ANTLR start "rule__SmallJava__ParentAssignment_2_1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:699:1: rule__SmallJava__ParentAssignment_2_1 : ( ( RULE_ID ) ) ;
-    public final void rule__SmallJava__ParentAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__SmallJava__FinalAssignment_1"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:804:1: rule__SmallJava__FinalAssignment_1 : ( ( 'final' ) ) ;
+    public final void rule__SmallJava__FinalAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:703:1: ( ( ( RULE_ID ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:704:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:808:1: ( ( ( 'final' ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:809:1: ( ( 'final' ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:704:1: ( ( RULE_ID ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:705:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:809:1: ( ( 'final' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:810:1: ( 'final' )
             {
-             before(grammarAccess.getSmallJavaAccess().getParentSmallJavaCrossReference_2_1_0()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:706:1: ( RULE_ID )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:707:1: RULE_ID
+             before(grammarAccess.getSmallJavaAccess().getFinalFinalKeyword_1_0()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:811:1: ( 'final' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:812:1: 'final'
             {
-             before(grammarAccess.getSmallJavaAccess().getParentSmallJavaIDTerminalRuleCall_2_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJava__ParentAssignment_2_11378); 
-             after(grammarAccess.getSmallJavaAccess().getParentSmallJavaIDTerminalRuleCall_2_1_0_1()); 
+             before(grammarAccess.getSmallJavaAccess().getFinalFinalKeyword_1_0()); 
+            match(input,22,FOLLOW_22_in_rule__SmallJava__FinalAssignment_11598); 
+             after(grammarAccess.getSmallJavaAccess().getFinalFinalKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getSmallJavaAccess().getParentSmallJavaCrossReference_2_1_0()); 
+             after(grammarAccess.getSmallJavaAccess().getFinalFinalKeyword_1_0()); 
 
             }
 
@@ -1833,29 +2162,111 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__SmallJava__ParentAssignment_2_1"
+    // $ANTLR end "rule__SmallJava__FinalAssignment_1"
 
 
-    // $ANTLR start "rule__SmallJava__AttributeAssignment_4"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:718:1: rule__SmallJava__AttributeAssignment_4 : ( ruleAttribute ) ;
-    public final void rule__SmallJava__AttributeAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__SmallJava__NameAssignment_3"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:827:1: rule__SmallJava__NameAssignment_3 : ( RULE_ID ) ;
+    public final void rule__SmallJava__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:722:1: ( ( ruleAttribute ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:723:1: ( ruleAttribute )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:831:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:832:1: ( RULE_ID )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:723:1: ( ruleAttribute )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:724:1: ruleAttribute
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:832:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:833:1: RULE_ID
             {
-             before(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleAttribute_in_rule__SmallJava__AttributeAssignment_41413);
+             before(grammarAccess.getSmallJavaAccess().getNameIDTerminalRuleCall_3_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJava__NameAssignment_31637); 
+             after(grammarAccess.getSmallJavaAccess().getNameIDTerminalRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__NameAssignment_3"
+
+
+    // $ANTLR start "rule__SmallJava__ParentAssignment_4_1"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:842:1: rule__SmallJava__ParentAssignment_4_1 : ( ( RULE_ID ) ) ;
+    public final void rule__SmallJava__ParentAssignment_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:846:1: ( ( ( RULE_ID ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:847:1: ( ( RULE_ID ) )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:847:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:848:1: ( RULE_ID )
+            {
+             before(grammarAccess.getSmallJavaAccess().getParentSmallJavaCrossReference_4_1_0()); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:849:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:850:1: RULE_ID
+            {
+             before(grammarAccess.getSmallJavaAccess().getParentSmallJavaIDTerminalRuleCall_4_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJava__ParentAssignment_4_11672); 
+             after(grammarAccess.getSmallJavaAccess().getParentSmallJavaIDTerminalRuleCall_4_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getSmallJavaAccess().getParentSmallJavaCrossReference_4_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SmallJava__ParentAssignment_4_1"
+
+
+    // $ANTLR start "rule__SmallJava__AttributeAssignment_6"
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:861:1: rule__SmallJava__AttributeAssignment_6 : ( ruleAttribute ) ;
+    public final void rule__SmallJava__AttributeAssignment_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:865:1: ( ( ruleAttribute ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:866:1: ( ruleAttribute )
+            {
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:866:1: ( ruleAttribute )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:867:1: ruleAttribute
+            {
+             before(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_ruleAttribute_in_rule__SmallJava__AttributeAssignment_61707);
             ruleAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_4_0()); 
+             after(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_6_0()); 
 
             }
 
@@ -1874,24 +2285,24 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__SmallJava__AttributeAssignment_4"
+    // $ANTLR end "rule__SmallJava__AttributeAssignment_6"
 
 
     // $ANTLR start "rule__Attribute__DatatypeAssignment_0"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:733:1: rule__Attribute__DatatypeAssignment_0 : ( ruleDatatype ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:876:1: rule__Attribute__DatatypeAssignment_0 : ( ruleDatatype ) ;
     public final void rule__Attribute__DatatypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:737:1: ( ( ruleDatatype ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:738:1: ( ruleDatatype )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:880:1: ( ( ruleDatatype ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:881:1: ( ruleDatatype )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:738:1: ( ruleDatatype )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:739:1: ruleDatatype
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:881:1: ( ruleDatatype )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:882:1: ruleDatatype
             {
              before(grammarAccess.getAttributeAccess().getDatatypeDatatypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleDatatype_in_rule__Attribute__DatatypeAssignment_01444);
+            pushFollow(FOLLOW_ruleDatatype_in_rule__Attribute__DatatypeAssignment_01738);
             ruleDatatype();
 
             state._fsp--;
@@ -1919,24 +2330,24 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__ArrayAssignment_1"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:748:1: rule__Attribute__ArrayAssignment_1 : ( ( '[]' ) ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:891:1: rule__Attribute__ArrayAssignment_1 : ( ( '[]' ) ) ;
     public final void rule__Attribute__ArrayAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:752:1: ( ( ( '[]' ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:753:1: ( ( '[]' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:895:1: ( ( ( '[]' ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:896:1: ( ( '[]' ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:753:1: ( ( '[]' ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:754:1: ( '[]' )
-            {
-             before(grammarAccess.getAttributeAccess().getArrayLeftSquareBracketRightSquareBracketKeyword_1_0()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:755:1: ( '[]' )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:756:1: '[]'
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:896:1: ( ( '[]' ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:897:1: ( '[]' )
             {
              before(grammarAccess.getAttributeAccess().getArrayLeftSquareBracketRightSquareBracketKeyword_1_0()); 
-            match(input,20,FOLLOW_20_in_rule__Attribute__ArrayAssignment_11480); 
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:898:1: ( '[]' )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:899:1: '[]'
+            {
+             before(grammarAccess.getAttributeAccess().getArrayLeftSquareBracketRightSquareBracketKeyword_1_0()); 
+            match(input,23,FOLLOW_23_in_rule__Attribute__ArrayAssignment_11774); 
              after(grammarAccess.getAttributeAccess().getArrayLeftSquareBracketRightSquareBracketKeyword_1_0()); 
 
             }
@@ -1964,20 +2375,20 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Attribute__NameAssignment_2"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:771:1: rule__Attribute__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:914:1: rule__Attribute__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Attribute__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:775:1: ( ( RULE_ID ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:776:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:918:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:919:1: ( RULE_ID )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:776:1: ( RULE_ID )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:777:1: RULE_ID
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:919:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:920:1: RULE_ID
             {
              before(grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Attribute__NameAssignment_21519); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Attribute__NameAssignment_21813); 
              after(grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -2001,24 +2412,24 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__SmallJavaType__TypeAssignment"
-    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:786:1: rule__SmallJavaType__TypeAssignment : ( ( RULE_ID ) ) ;
+    // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:929:1: rule__SmallJavaType__TypeAssignment : ( ( RULE_ID ) ) ;
     public final void rule__SmallJavaType__TypeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:790:1: ( ( ( RULE_ID ) ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:791:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:933:1: ( ( ( RULE_ID ) ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:934:1: ( ( RULE_ID ) )
             {
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:791:1: ( ( RULE_ID ) )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:792:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:934:1: ( ( RULE_ID ) )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:935:1: ( RULE_ID )
             {
              before(grammarAccess.getSmallJavaTypeAccess().getTypeSmallJavaCrossReference_0()); 
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:793:1: ( RULE_ID )
-            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:794:1: RULE_ID
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:936:1: ( RULE_ID )
+            // ../org.shashwat.xtext.smallJava.ui/src-gen/org/shashwat/xtext/smallJava/ui/contentassist/antlr/internal/InternalSmallJavaDsl.g:937:1: RULE_ID
             {
              before(grammarAccess.getSmallJavaTypeAccess().getTypeSmallJavaIDTerminalRuleCall_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJavaType__TypeAssignment1554); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SmallJavaType__TypeAssignment1848); 
              after(grammarAccess.getSmallJavaTypeAccess().getTypeSmallJavaIDTerminalRuleCall_0_1()); 
 
             }
@@ -2064,53 +2475,64 @@ public class InternalSmallJavaDslParser extends AbstractInternalContentAssistPar
     public static final BitSet FOLLOW_ruleSmallJavaType_in_entryRuleSmallJavaType301 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSmallJavaType308 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SmallJavaType__TypeAssignment_in_ruleSmallJavaType334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Datatype__Group_0__0_in_rule__Datatype__Alternatives370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSmallJavaType_in_rule__Datatype__Alternatives388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SimpleType__Alternatives421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SimpleType__Alternatives441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SimpleType__Alternatives461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SimpleType__Alternatives481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SimpleType__Alternatives501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__0__Impl_in_rule__SmallJava__Group__0533 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__1_in_rule__SmallJava__Group__0536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__SmallJava__Group__0__Impl564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__1__Impl_in_rule__SmallJava__Group__1595 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__2_in_rule__SmallJava__Group__1598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__NameAssignment_1_in_rule__SmallJava__Group__1__Impl625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__2__Impl_in_rule__SmallJava__Group__2655 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__3_in_rule__SmallJava__Group__2658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group_2__0_in_rule__SmallJava__Group__2__Impl685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__3__Impl_in_rule__SmallJava__Group__3716 = new BitSet(new long[]{0x000000000004F810L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__4_in_rule__SmallJava__Group__3719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__SmallJava__Group__3__Impl747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__4__Impl_in_rule__SmallJava__Group__4778 = new BitSet(new long[]{0x000000000004F810L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__5_in_rule__SmallJava__Group__4781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__AttributeAssignment_4_in_rule__SmallJava__Group__4__Impl808 = new BitSet(new long[]{0x000000000000F812L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group__5__Impl_in_rule__SmallJava__Group__5839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__SmallJava__Group__5__Impl867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group_2__0__Impl_in_rule__SmallJava__Group_2__0910 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group_2__1_in_rule__SmallJava__Group_2__0913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__SmallJava__Group_2__0__Impl941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__Group_2__1__Impl_in_rule__SmallJava__Group_2__1972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SmallJava__ParentAssignment_2_1_in_rule__SmallJava__Group_2__1__Impl999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__01033 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__01036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__DatatypeAssignment_0_in_rule__Attribute__Group__0__Impl1063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__11093 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__11096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__ArrayAssignment_1_in_rule__Attribute__Group__1__Impl1123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__21154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__NameAssignment_2_in_rule__Attribute__Group__2__Impl1181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Datatype__Group_0__0__Impl_in_rule__Datatype__Group_0__01217 = new BitSet(new long[]{0x000000000000F800L});
-    public static final BitSet FOLLOW_rule__Datatype__Group_0__1_in_rule__Datatype__Group_0__01220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Datatype__Group_0__1__Impl_in_rule__Datatype__Group_0__11278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleType_in_rule__Datatype__Group_0__1__Impl1305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJava__NameAssignment_11343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJava__ParentAssignment_2_11378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttribute_in_rule__SmallJava__AttributeAssignment_41413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDatatype_in_rule__Attribute__DatatypeAssignment_01444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Attribute__ArrayAssignment_11480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Attribute__NameAssignment_21519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJavaType__TypeAssignment1554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VisibilityTypes__Alternatives_in_ruleVisibilityTypes371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Datatype__Group_0__0_in_rule__Datatype__Alternatives406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSmallJavaType_in_rule__Datatype__Alternatives424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__SimpleType__Alternatives457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__SimpleType__Alternatives477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__SimpleType__Alternatives497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SimpleType__Alternatives517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SimpleType__Alternatives537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__VisibilityTypes__Alternatives572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__VisibilityTypes__Alternatives593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__0__Impl_in_rule__SmallJava__Group__0626 = new BitSet(new long[]{0x0000000000440000L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__1_in_rule__SmallJava__Group__0629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__VisibilityAssignment_0_in_rule__SmallJava__Group__0__Impl656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__1__Impl_in_rule__SmallJava__Group__1687 = new BitSet(new long[]{0x0000000000440000L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__2_in_rule__SmallJava__Group__1690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__FinalAssignment_1_in_rule__SmallJava__Group__1__Impl717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__2__Impl_in_rule__SmallJava__Group__2748 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__3_in_rule__SmallJava__Group__2751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SmallJava__Group__2__Impl779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__3__Impl_in_rule__SmallJava__Group__3810 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__4_in_rule__SmallJava__Group__3813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__NameAssignment_3_in_rule__SmallJava__Group__3__Impl840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__4__Impl_in_rule__SmallJava__Group__4870 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__5_in_rule__SmallJava__Group__4873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group_4__0_in_rule__SmallJava__Group__4__Impl900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__5__Impl_in_rule__SmallJava__Group__5931 = new BitSet(new long[]{0x000000000010F810L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__6_in_rule__SmallJava__Group__5934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__SmallJava__Group__5__Impl962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__6__Impl_in_rule__SmallJava__Group__6993 = new BitSet(new long[]{0x000000000010F810L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__7_in_rule__SmallJava__Group__6996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__AttributeAssignment_6_in_rule__SmallJava__Group__6__Impl1023 = new BitSet(new long[]{0x000000000000F812L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group__7__Impl_in_rule__SmallJava__Group__71054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__SmallJava__Group__7__Impl1082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group_4__0__Impl_in_rule__SmallJava__Group_4__01129 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group_4__1_in_rule__SmallJava__Group_4__01132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__SmallJava__Group_4__0__Impl1160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__Group_4__1__Impl_in_rule__SmallJava__Group_4__11191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SmallJava__ParentAssignment_4_1_in_rule__SmallJava__Group_4__1__Impl1218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__01252 = new BitSet(new long[]{0x0000000000800010L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__01255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__DatatypeAssignment_0_in_rule__Attribute__Group__0__Impl1282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__11312 = new BitSet(new long[]{0x0000000000800010L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__11315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__ArrayAssignment_1_in_rule__Attribute__Group__1__Impl1342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__21373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__NameAssignment_2_in_rule__Attribute__Group__2__Impl1400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Datatype__Group_0__0__Impl_in_rule__Datatype__Group_0__01436 = new BitSet(new long[]{0x000000000000F800L});
+    public static final BitSet FOLLOW_rule__Datatype__Group_0__1_in_rule__Datatype__Group_0__01439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Datatype__Group_0__1__Impl_in_rule__Datatype__Group_0__11497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleType_in_rule__Datatype__Group_0__1__Impl1524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisibilityTypes_in_rule__SmallJava__VisibilityAssignment_01562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__SmallJava__FinalAssignment_11598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJava__NameAssignment_31637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJava__ParentAssignment_4_11672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttribute_in_rule__SmallJava__AttributeAssignment_61707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDatatype_in_rule__Attribute__DatatypeAssignment_01738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Attribute__ArrayAssignment_11774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Attribute__NameAssignment_21813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SmallJavaType__TypeAssignment1848 = new BitSet(new long[]{0x0000000000000002L});
 
 }

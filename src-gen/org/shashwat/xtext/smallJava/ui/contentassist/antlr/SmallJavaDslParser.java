@@ -39,13 +39,16 @@ public class SmallJavaDslParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getDatatypeAccess().getAlternatives(), "rule__Datatype__Alternatives");
 					put(grammarAccess.getSimpleTypeAccess().getAlternatives(), "rule__SimpleType__Alternatives");
+					put(grammarAccess.getVisibilityTypesAccess().getAlternatives(), "rule__VisibilityTypes__Alternatives");
 					put(grammarAccess.getSmallJavaAccess().getGroup(), "rule__SmallJava__Group__0");
-					put(grammarAccess.getSmallJavaAccess().getGroup_2(), "rule__SmallJava__Group_2__0");
+					put(grammarAccess.getSmallJavaAccess().getGroup_4(), "rule__SmallJava__Group_4__0");
 					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 					put(grammarAccess.getDatatypeAccess().getGroup_0(), "rule__Datatype__Group_0__0");
-					put(grammarAccess.getSmallJavaAccess().getNameAssignment_1(), "rule__SmallJava__NameAssignment_1");
-					put(grammarAccess.getSmallJavaAccess().getParentAssignment_2_1(), "rule__SmallJava__ParentAssignment_2_1");
-					put(grammarAccess.getSmallJavaAccess().getAttributeAssignment_4(), "rule__SmallJava__AttributeAssignment_4");
+					put(grammarAccess.getSmallJavaAccess().getVisibilityAssignment_0(), "rule__SmallJava__VisibilityAssignment_0");
+					put(grammarAccess.getSmallJavaAccess().getFinalAssignment_1(), "rule__SmallJava__FinalAssignment_1");
+					put(grammarAccess.getSmallJavaAccess().getNameAssignment_3(), "rule__SmallJava__NameAssignment_3");
+					put(grammarAccess.getSmallJavaAccess().getParentAssignment_4_1(), "rule__SmallJava__ParentAssignment_4_1");
+					put(grammarAccess.getSmallJavaAccess().getAttributeAssignment_6(), "rule__SmallJava__AttributeAssignment_6");
 					put(grammarAccess.getAttributeAccess().getDatatypeAssignment_0(), "rule__Attribute__DatatypeAssignment_0");
 					put(grammarAccess.getAttributeAccess().getArrayAssignment_1(), "rule__Attribute__ArrayAssignment_1");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_2(), "rule__Attribute__NameAssignment_2");
