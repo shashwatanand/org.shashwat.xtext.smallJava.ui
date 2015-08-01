@@ -40,6 +40,8 @@ public class SmallJavaDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSmallJavaAccess().getGroup(), "rule__SmallJava__Group__0");
 					put(grammarAccess.getSmallJavaAccess().getNameAssignment_1(), "rule__SmallJava__NameAssignment_1");
 					put(grammarAccess.getSmallJavaAccess().getParentAssignment_3(), "rule__SmallJava__ParentAssignment_3");
+					put(grammarAccess.getSmallJavaAccess().getAttributeAssignment_5(), "rule__SmallJava__AttributeAssignment_5");
+					put(grammarAccess.getAttributeAccess().getNameAssignment(), "rule__Attribute__NameAssignment");
 				}
 			};
 		}

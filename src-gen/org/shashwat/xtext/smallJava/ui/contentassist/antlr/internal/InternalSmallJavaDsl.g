@@ -84,6 +84,34 @@ finally {
 
 
 
+// Entry rule entryRuleAttribute
+entryRuleAttribute 
+:
+{ before(grammarAccess.getAttributeRule()); }
+	 ruleAttribute
+{ after(grammarAccess.getAttributeRule()); } 
+	 EOF 
+;
+
+// Rule Attribute
+ruleAttribute
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getAttributeAccess().getNameAssignment()); }
+(rule__Attribute__NameAssignment)
+{ after(grammarAccess.getAttributeAccess().getNameAssignment()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 
 
 
@@ -244,6 +272,7 @@ rule__SmallJava__Group__5
     }
 :
 	rule__SmallJava__Group__5__Impl
+	rule__SmallJava__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -255,17 +284,47 @@ rule__SmallJava__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_5()); }
-
-	'}' 
-
-{ after(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_5()); }
+{ before(grammarAccess.getSmallJavaAccess().getAttributeAssignment_5()); }
+(rule__SmallJava__AttributeAssignment_5)
+{ after(grammarAccess.getSmallJavaAccess().getAttributeAssignment_5()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__SmallJava__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__SmallJava__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SmallJava__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_6()); }
+
+	'}' 
+
+{ after(grammarAccess.getSmallJavaAccess().getRightCurlyBracketKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -308,6 +367,36 @@ rule__SmallJava__ParentAssignment_3
 	RULE_ID{ after(grammarAccess.getSmallJavaAccess().getParentSmallJavaIDTerminalRuleCall_3_0_1()); }
 )
 { after(grammarAccess.getSmallJavaAccess().getParentSmallJavaCrossReference_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SmallJava__AttributeAssignment_5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_5_0()); }
+	ruleAttribute{ after(grammarAccess.getSmallJavaAccess().getAttributeAttributeParserRuleCall_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Attribute__NameAssignment
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_0()); }
+	RULE_ID{ after(grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_0()); }
 )
 
 ;
