@@ -37,11 +37,19 @@ public class SmallJavaDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getDatatypeAccess().getAlternatives(), "rule__Datatype__Alternatives");
+					put(grammarAccess.getSimpleTypeAccess().getAlternatives(), "rule__SimpleType__Alternatives");
 					put(grammarAccess.getSmallJavaAccess().getGroup(), "rule__SmallJava__Group__0");
+					put(grammarAccess.getSmallJavaAccess().getGroup_2(), "rule__SmallJava__Group_2__0");
+					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
+					put(grammarAccess.getDatatypeAccess().getGroup_0(), "rule__Datatype__Group_0__0");
 					put(grammarAccess.getSmallJavaAccess().getNameAssignment_1(), "rule__SmallJava__NameAssignment_1");
-					put(grammarAccess.getSmallJavaAccess().getParentAssignment_3(), "rule__SmallJava__ParentAssignment_3");
-					put(grammarAccess.getSmallJavaAccess().getAttributeAssignment_5(), "rule__SmallJava__AttributeAssignment_5");
-					put(grammarAccess.getAttributeAccess().getNameAssignment(), "rule__Attribute__NameAssignment");
+					put(grammarAccess.getSmallJavaAccess().getParentAssignment_2_1(), "rule__SmallJava__ParentAssignment_2_1");
+					put(grammarAccess.getSmallJavaAccess().getAttributeAssignment_4(), "rule__SmallJava__AttributeAssignment_4");
+					put(grammarAccess.getAttributeAccess().getDatatypeAssignment_0(), "rule__Attribute__DatatypeAssignment_0");
+					put(grammarAccess.getAttributeAccess().getArrayAssignment_1(), "rule__Attribute__ArrayAssignment_1");
+					put(grammarAccess.getAttributeAccess().getNameAssignment_2(), "rule__Attribute__NameAssignment_2");
+					put(grammarAccess.getSmallJavaTypeAccess().getTypeAssignment(), "rule__SmallJavaType__TypeAssignment");
 				}
 			};
 		}
