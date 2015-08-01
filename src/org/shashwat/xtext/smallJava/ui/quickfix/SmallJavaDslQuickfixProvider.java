@@ -3,6 +3,17 @@
  */
 package org.shashwat.xtext.smallJava.ui.quickfix;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.ui.editor.model.IXtextDocument;
+import org.eclipse.xtext.ui.editor.model.edit.IModification;
+import org.eclipse.xtext.ui.editor.model.edit.IModificationContext;
+import org.eclipse.xtext.ui.editor.model.edit.ISemanticModification;
+import org.eclipse.xtext.ui.editor.quickfix.Fix;
+import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor;
+import org.eclipse.xtext.validation.Issue;
+import org.shashwat.xtext.smallJava.smallJavaDsl.SmallJava;
+import org.shashwat.xtext.smallJava.validation.IssueCodes;
+
 /**
  * Custom quickfixes.
  *
@@ -10,15 +21,40 @@ package org.shashwat.xtext.smallJava.ui.quickfix;
  */
 public class SmallJavaDslQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
 
-//	@Fix(MyJavaValidator.INVALID_NAME)
-//	public void capitalizeName(final Issue issue, IssueResolutionAcceptor acceptor) {
-//		acceptor.accept(issue, "Capitalize name", "Capitalize the name.", "upcase.png", new IModification() {
-//			public void apply(IModificationContext context) throws BadLocationException {
-//				IXtextDocument xtextDocument = context.getXtextDocument();
-//				String firstLetter = xtextDocument.get(issue.getOffset(), 1);
-//				xtextDocument.replace(issue.getOffset(), 1, firstLetter.toUpperCase());
-//			}
-//		});
-//	}
+	@Fix(IssueCodes.INVALID_CLASS_NAME)
+	public void quickFixForCheckClassNameShouldStartWithCapitalLetter(final Issue issue,
+			IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Capatalize class name first char", 
+				"Capatalize class name first char", "", new IModification() {
+					
+					@Override
+					public void apply(IModificationContext context) throws Exception {
+						final IXtextDocument xtextDocument = context.getXtextDocument();
+						String firstChar = xtextDocument.get(issue.getOffset(), 1);
+						xtextDocument.replace(issue.getOffset(), 1, firstChar.toUpperCase());
+					}
+				});
+	}
+	
+	@Fix(IssueCodes.INVALID_ATTRIBUTE_NAME)
+	public void quickFixForCheckAttributeShouldStartWithLowerLetter(final Issue issue,
+			IssueResolutionAcceptor acceptor) {
+		
+	}
+	
+	@Fix(IssueCodes.INVALID_PARENT_NAME)
+	public void quickFixForsmallClassCannotExtendAFinalClass(final Issue issue,
+			IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Remove parent class", "Remove parent class", "", 
+				new ISemanticModification() {
+					
+					@Override
+					public void apply(EObject element, IModificationContext context) throws Exception {
+						final SmallJava currentClass = (SmallJava) element;
+						currentClass.setParent(null);
+					}
+				});
+		
+	}
 
 }
