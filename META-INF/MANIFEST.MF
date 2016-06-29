@@ -21,5 +21,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.shashwat.xtext.smallJava.ui.quickfix,
  org.shashwat.xtext.smallJava.ui.contentassist,
  org.shashwat.xtext.smallJava.ui.internal,
- org.shashwat.xtext.smallJava.ui.contentassist.antlr
+ org.shashwat.xtext.smallJava.ui.contentassist.antlr,
+ org.shashwat.xtext.smallJava.ui.contentassist.antlr.internal
 Bundle-Activator: org.shashwat.xtext.smallJava.ui.internal.SmallJavaDslActivator
